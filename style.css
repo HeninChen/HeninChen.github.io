@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600;800&display=swap');
+* {
+    scroll-behavior: smooth;
+    transition-duration: 500ms;
+  }
+body{
+height: 100%;
+}
+body{
+    background-image: linear-gradient(to left bottom, #ffffff, #fdfdff, #fbfcff, #f8faff, #f5f9ff);
+    font-family: 'Prompt', sans-serif;
+}
+::selection{
+    background:#2C82B5;
+    color: white;
+}
+/*------------------------Typing animation--------------------------*/
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.animation h1{ 
+	font-family: 'Prompt', sans-serif;
+    font-weight: 600;
+    color:#015C91;
+	border-right: .1em solid #015C91;
+	width: 7em; 
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end),
+	                blink-caret .5s step-end infinite alternate;
+}
+/*-----------text fade in animation----------*/
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1.5s;
+    animation-name: animatebottom;
+    animation-duration: 1.5s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+ /*----------------------------navbar setting-----------------------------*/ 
+.my_nav{
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.816);
+}
+.line{
+    width:100%;
+    background-color: black;
+    height: 1px;
+    margin-top: 30px;
+}
+#my_link_total{
+    margin-top: 30px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+#my_link{
+    color: rgb(85, 85, 85);
+}
+#my_link:hover{
+    color: #53A6D8;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/*----------------------------homepage content setting---------------------*/
+#my_container{
+    margin-top: 12rem;
+    /* border: solid 0.1px; */
+    min-height:90vh; 
+    min-width: 480px;
+}
+.profile_content{
+    padding-top: 10rem;
+}
+#profile_text{
+padding-left: 50px;
+}
+.photo{
+    position: relative;
+    display: inline-block;
+}
+#profile_photo{
+    vertical-align: bottom;
+}
+#profile_photo{
+    width: 60%;
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
+}
+.photo:after {
+    content: '';
+    position: absolute;
+    left: 5.5rem;
+    top: -3rem;
+    border: 3px solid #88CDF6;
+    width: 60%;
+    height: 100%;
+    z-index: -1;
+}
+.profile_paragraph{
+    font-size: 18px;
+}
+.link_outside{
+    font-family: 'Prompt', sans-serif;
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    text-decoration: none;
+}
+.link_outside:hover{
+    color: #53A6D8;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/*-----------------------------footer----------------------------------*/
+footer{
+    background: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_text{
+    color: #b7b7b7;
+}
+
+/*----------------------------homepage responsive setting---------------------*/
+
+@media (max-width: 1536px){
+    .photo:after{
+        display: none;
+    }
+    #profile_photo{
+        width: 90%;
+    }
+}
+@media (max-width: 1280px){
+
+}
+@media (max-width: 992px){
+    #profile_photo{
+        width: 70%;
+    }
+}
+@media (max-width: 665px){
+    #profile_photo{
+        width: 90%;
+    }
+    #my_container{
+        padding:30px;
+    }
+}
+/*-----------------------Scrolling--------------------------*/
+#Graduate_research, #Experience, #Research_Publications, #Other_Publications{
+    scroll-margin-top: 150px;
+    }
+
+/*----------------------Sub page---------------------*/
+
+.container_full_white{
+    background-color: white;
+    padding: 60px;
+    min-height: 100vh;
+}
+.container_full_lightblue{
+    background-color:#FBFCFF;
+    padding: 60px;
+    min-height: 100vh;
+}
+.container_short_lightblue{
+    background-color:#FBFCFF;
+    padding: 60px;
+    min-height: 60vh;
+}
